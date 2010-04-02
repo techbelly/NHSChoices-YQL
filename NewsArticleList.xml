@@ -3,16 +3,16 @@
   <meta>
     <author>Least Bee Ltd</author>
     <documentationURL>http://www.nhs.uk/nhscws</documentationURL>
-    <sampleQuery>select * from {table} where Title="Cancer" and user='your username' AND pwd='your password'</sampleQuery>
-  </meta>
+    <sampleQuery>select * from {table} where Topic="Cancer" and user='your username' AND pwd='your password'</sampleQuery>  </meta>
   <bindings>
    <select itemPath="NewsTopicsList.NewsTopic" produces="XML">
       <urls>
-        <url env="all">http://www.nhs.uk/nhscws/News/NewsTopicsList.aspx</url>
+        <url env="all">http://www.nhs.uk/nhscws/News/NewsArticleList.aspx</url>
       </urls>
       <inputs>
         <key id="user" type="xs:string" paramType="query" />
         <key id="pwd" type="xs:string" paramType="query" />
+        <key id="topix" type="xs:string" paramType="query" />
       </inputs>
     </select>
   </bindings>
