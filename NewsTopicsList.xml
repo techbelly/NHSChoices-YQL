@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table xlmn="http://query.yahooapis.com/v1/schema/table.xsd">
+  <meta>
+    <author>Least Bee Ltd</author>
+    <documentationURL>http://www.nhs.uk/nhscws</documentationURL>
+    <sampleQuery>select * from {table} where Title="Cancer"</sampleQuery>
+  </meta>
+  <bindings>
+   <select itemPath="NewsTopicsList.NewsTopic" produces="XML">
+      <urls>
+        <url env="all">http://www.nhs.uk/nhscws/News/NewsTopicsList.aspx</url>
+      </urls>
+      <inputs>
+        <key id="user" type="xs:string" paramType="query" />
+        <key id="pwd" type="xs:string" paramType="query" />
+      </inputs>
+    </select>
+  </bindings>
+</table>
