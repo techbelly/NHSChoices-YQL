@@ -12,7 +12,7 @@
       <inputs>
         <key id="user" type="xs:string" paramType="query" />
         <key id="pwd" type="xs:string" paramType="query" />
-        <key id="topix" type="xs:string" paramType="query" />
+        <key id="topic" type="xs:string" paramType="query" />
       </inputs>
     </select>
   </bindings>
