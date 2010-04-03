@@ -5,9 +5,9 @@
     <documentationURL>http://www.nhs.uk/nhscws</documentationURL>
     <sampleQuery>select * from {table} where Topic="Cancer" and user='your username' AND pwd='your password'</sampleQuery>  </meta>
   <bindings>
-   <select itemPath="NewsTopicsList.NewsTopic" produces="XML">
+   <select itemPath="NewsML.NewsItem.NewsComponent.NewsComponent" produces="XML">
       <urls>
-        <url env="all">http://www.nhs.uk/nhscws/News/NewsArticleList.aspx</url>
+        <url env="all">http://www.nhs.uk/nhscws/News/NewsArticlesList.aspx</url>
       </urls>
       <inputs>
         <key id="user" type="xs:string" paramType="query" />
