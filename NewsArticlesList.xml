@@ -10,16 +10,16 @@
       <urls>
         <url env="all">http://www.nhs.uk/nhscws/News/NewsArticlesList.aspx</url>
       </urls>
+       <paging model="page">  
+          <start id="pageNumber" default="1" />  
+          <pagesize id="pageSize" max="250" />  
+          <total default="10" />  
+        </paging>
       <inputs>
         <key id="user" type="xs:string" paramType="query" />
         <key id="pwd" type="xs:string" paramType="query" />
         <key id="topic" type="xs:string" paramType="query" />
       </inputs>
-      <paging model="page">  
-        <start id="pageNumber" default="1" />  
-        <pagesize id="pageSize" max="250" />  
-        <total default="10" />  
-      </paging>
     </select>
   </bindings>
 </table>
