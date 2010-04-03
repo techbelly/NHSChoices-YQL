@@ -3,7 +3,8 @@
   <meta>
     <author>Least Bee Ltd</author>
     <documentationURL>http://www.nhs.uk/nhscws</documentationURL>
-    <sampleQuery>select * from {table} where Topic="Cancer" and user='your username' AND pwd='your password'</sampleQuery>  </meta>
+    <sampleQuery>select * from {table} where topic="Cancer" and user='your username' AND pwd='your password'</sampleQuery>  
+  </meta>
   <bindings>
    <select itemPath="NewsML.NewsItem.NewsComponent.NewsComponent" produces="XML">
       <urls>
@@ -14,6 +15,11 @@
         <key id="pwd" type="xs:string" paramType="query" />
         <key id="topic" type="xs:string" paramType="query" />
       </inputs>
+      <paging model="page">  
+        <start id="pageNumber" default="1" />  
+        <pagesize id="pageSize" max="250" />  
+        <total default="10" />  
+      </paging>
     </select>
   </bindings>
 </table>
